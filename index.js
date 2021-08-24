@@ -7,7 +7,7 @@ const app = express();
 const controller = require('./App/controllers');
 const service = require('./App/services/Games');
 const model = require('./App/models/Games')
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
