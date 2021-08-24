@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-const MONGO_DB_URL = 'mongodb://127.0.0.1:27017';
+const MONGO_DB_URL = process.env.MongoDB || 'mongodb://127.0.0.1:27017';
 
 let schema = null;
 async function connection() {
